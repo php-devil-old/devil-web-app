@@ -1,0 +1,22 @@
+{
+  "name":              "php-devil/devil-web-app-simple",
+  "description":       "Simple PHPDevil web application skeleton",
+  "minimum-stability": "dev",
+  "license":           "MIT",
+  "authors": [
+    {
+      "name":  "Alexey Volkov",
+      "email": "alex.phpdevil@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "app\\":    "protected",
+      "common\\": "common"
+    }
+  },
+  "require": {
+    "php-devil/php-devil-wible":   "^0.1",
+    "web-wizardry/php-devil-user": "^0.1"
+  }
+}
