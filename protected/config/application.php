@@ -25,9 +25,15 @@ return [
     'modules' => [
         'user' => [
             'class' => \WebWizardry\DevilModules\user\UserModule::class,
+            'abac'  => [
+                'backend' => [\common\abac\UserRolesMembership::class, 'isAdmin']
+            ],
         ],
         'admin' => [
             'class' => \PhpDevil\WibleCMS\WibleCms::class,
+            'abac'  => [
+                'frontend' => [\common\abac\UserRolesMembership::class, 'isEditor']
+            ],
         ],
     ],
 ];
