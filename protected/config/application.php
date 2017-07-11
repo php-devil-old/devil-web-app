@@ -35,6 +35,9 @@ return [
                 'frontend' => [\common\abac\UserRolesMembership::class, 'isEditor']
             ],
         ],
+        'migrate' => [
+            'class' => \PhpDevil\core\modules\migration\MigrationModule::class,
+        ],
     ],
 ];
 
