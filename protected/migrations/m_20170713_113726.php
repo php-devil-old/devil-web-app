@@ -1,7 +1,7 @@
 <?php
 use PhpDevil\core\modules\migration\components\applier\MigrationExecutable;
 
-class m_20170712_134407 extends MigrationExecutable
+class m_20170713_113726 extends MigrationExecutable
 {
     /**
      * Комментарий к миграции для сохранения в таблице логирования
@@ -10,7 +10,7 @@ class m_20170712_134407 extends MigrationExecutable
      */
     public static function getComment()
     {
-        return 'empty migration test';
+        return 'init';
     }
 
     public static function sourceClass()
@@ -20,7 +20,7 @@ class m_20170712_134407 extends MigrationExecutable
 
     public static function getTime()
     {
-        return '20170712_134407';
+        return '20170713_113726';
     }
 
     /**
