@@ -29,6 +29,11 @@ return [
                 'backend' => [\common\abac\UserRolesMembership::class, 'isAdmin']
             ],
         ],
+
+        'crm' => [
+            'class' => \common\modules\webwizardry\crm\CrmModule::class,
+        ],
+
         'admin' => [
             'class' => \PhpDevil\WibleCMS\WibleCms::class,
             'abac'  => [

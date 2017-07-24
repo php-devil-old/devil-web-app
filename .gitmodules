@@ -1,0 +1,6 @@
+[submodule "common/modules/webwizardry/corpstructure"]
+	path = common/modules/webwizardry/corpstructure
+	url = https://alexwweb@bitbucket.org/webwizardrydevelopment/corpstructure.git
+[submodule "common/modules/webwizardry/crm"]
+	path = common/modules/webwizardry/crm
+	url = https://alexwweb@bitbucket.org/webwizardrydevelopment/crm.git
