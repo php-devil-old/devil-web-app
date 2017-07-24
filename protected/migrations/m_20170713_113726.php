@@ -10,12 +10,12 @@ class m_20170713_113726 extends MigrationExecutable
      */
     public static function getComment()
     {
-        return 'init';
+        return 'User Idenity Table';
     }
 
     public static function sourceClass()
     {
-        return '';
+        return \WebWizardry\DevilModules\user\models\Idenity::class;
     }
 
     public static function getTime()
@@ -28,7 +28,17 @@ class m_20170713_113726 extends MigrationExecutable
      */
     public function up()
     {
-		//todo: implement method
+        $this->createTable((static::sourceClass())::tableName())
+            ->column('id', 'int(10) unsigned')->notNull()->autoIncrement()
+            ->column('default_role', 'int(10) unsigned')->notNull()
+            ->column('email', 'string')->notNull()
+            ->column('organization', 'int(10) unsigned')
+            ->column('pass_hash', 'string')->notNull()
+            ->column('auth_key',  'string')
+            ->key('primary')->onColls('id')
+            ->setTableOption('ENGINE', 'InnoDB')
+            ->setTableOption('DEFAULT CHARSET', 'utf8')
+            ->execute();
     }
 
     /**
@@ -36,6 +46,6 @@ class m_20170713_113726 extends MigrationExecutable
      */
     public function down()
     {
-		//todo: implement method
+        $this->dropTable((static::sourceClass())::tableName())->execute();
     }
 }

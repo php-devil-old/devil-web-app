@@ -10,12 +10,12 @@ class m_20170713_115018 extends MigrationExecutable
      */
     public static function getComment()
     {
-        return 'test 2';
+        return 'Developer account creation';
     }
 
     public static function sourceClass()
     {
-        return '';
+        return \WebWizardry\DevilModules\user\models\Idenity::class;
     }
 
     public static function getTime()
@@ -28,7 +28,13 @@ class m_20170713_115018 extends MigrationExecutable
      */
     public function up()
     {
-		//todo: implement method
+		$idenity = (static::sourceClass())::model();
+		$idenity->attributes = [
+		    'email'        => 'admin@example.com',
+            'password'     => 'admin',
+            'default_role' => \WebWizardry\DevilModules\user\models\Idenity::ROLE_ADMIN,
+        ];
+		$idenity->save();
     }
 
     /**
@@ -36,6 +42,6 @@ class m_20170713_115018 extends MigrationExecutable
      */
     public function down()
     {
-		//todo: implement method
+		// при откате миграции запись не удаляем
     }
 }
