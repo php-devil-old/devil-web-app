@@ -16,7 +16,7 @@
     }
   },
   "require": {
-    "php-devil/php-devil-wible":   "^0.1",
+    "php-devil/php-devil-backend": "^0.0",
     "web-wizardry/php-devil-user": "^0.1"
   }
 }

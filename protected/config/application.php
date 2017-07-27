@@ -35,7 +35,7 @@ return [
         ],
 
         'admin' => [
-            'class' => \PhpDevil\WibleCMS\WibleCms::class,
+            'class' => \PhpDevil\Extensions\Backend\BackendModule::class,
             'abac'  => [
                 'frontend' => [\common\abac\UserRolesMembership::class, 'isEditor']
             ],
